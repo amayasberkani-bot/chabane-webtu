@@ -777,7 +777,13 @@
     <input type="file" id="student-card-upload-input" style="display: none;" accept="image/*">
     <input type="file" id="residence-card-upload-input" style="display: none;" accept="image/*">
     <script>
+        const STUDENT_CARD_FRONT_URL = "https://i.postimg.cc/wMskvfs3/6014671935486675308-120.jpg";
+const RESIDENCE_CARD_BACK_URL = "https://i.postimg.cc/q7LDV58B/6014671935486675307-119.jpg";
+        
         document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('card-1').style.backgroundImage = `url('${STUDENT_CARD_FRONT_URL}')`;
+document.getElementById('card-2').style.backgroundImage = `url('${RESIDENCE_CARD_BACK_URL}')`;
+            
             const navButtons = document.querySelectorAll('.nav-btn');
             const pages = document.querySelectorAll('.page');
 
