@@ -1177,6 +1177,12 @@
             updateUserInfo(currentUserData);
             setLanguage('en');
         });
+        if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("./sw.js")
+      .then(() => console.log("✅ Service Worker مسجل بنجاح"))
+      .catch(err => console.log("❌ خطأ في التسجيل:", err));
+  }
     </script>
 </body>
 </html>
